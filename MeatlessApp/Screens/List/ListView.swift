@@ -86,7 +86,8 @@ extension ListView: UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CellView
 
-        // STORY 2: Configure cell with the restaurant information.
+        let restaurant = restaurants[indexPath.row]
+        cell.updateView(restaurant: restaurant)
 
         return cell
     }

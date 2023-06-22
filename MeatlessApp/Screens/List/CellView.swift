@@ -60,7 +60,9 @@ extension CellView {
  
     func updateView(restaurant: Restaurant) {
         
-        // STORY 2: Configure CellView with the Restaurant data.
+        restaurantNameLabel.text = restaurant.name
+        restaurantInfoLabel.text = "\(restaurant.distance) • \(restaurant.status)"
+        logoImageView.image = UIImage(named: restaurant.image)
          
     }
 }
